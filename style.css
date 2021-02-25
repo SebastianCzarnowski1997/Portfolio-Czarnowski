@@ -1,0 +1,2061 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #17252A;
+    font-family: "roboto";
+    overflow-x: hidden;
+
+}
+
+/* Starting page  */
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: arial;
+    background-color: #17252A;
+    font-family: 'Roboto',
+        sans-serif;
+    flex-basis: 0;
+}
+
+/* First circle animation */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-reflect: below 1px linear-gradient(#0001, #0004);
+
+}
+
+.animation2 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #17252A;
+    animation: animate 2s linear infinite;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    0% {
+        transform: rotate(-360deg);
+    }
+
+}
+
+.animation .animation2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.4));
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+
+}
+
+.animation .animation2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 20px;
+    height: 20px;
+    background: #00fff9;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 10px 10px 8px #00fff9;
+    -webkit-box-shadow: 3px 3px 5px 6px #00fff9;
+    -moz-box-shadow: 3px 3px 5px 6px #00fff9;
+    box-shadow: 3px 3px 5px 6px #00fff9;
+
+}
+
+.animation .animation2 span {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #17252A;
+    border-radius: 50%;
+
+
+}
+
+/* Information about me */
+div.myinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    width: 60%;
+    color: #FEFFFF;
+    text-align: left;
+    flex-grow: 1;
+    flex-basis: 0;
+
+}
+
+.allinformations {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 30%;
+    width: 70%;
+}
+
+.hi,
+.myname,
+.proffesion {
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 27px;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+button.cv {
+    background-color: transparent;
+    padding: 5px 15px;
+    color: #DEF2F1;
+    border: 3px solid #DEF2F1;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 1.5s;
+}
+
+.switch {
+    opacity: 0;
+}
+
+button.cv:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #00fff9;
+}
+
+button.cv span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Side menu */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    background-color: #2B7A78;
+    color: #FEFFFF;
+    flex-grow: 1;
+    flex-basis: 0;
+    z-index: 5;
+}
+
+.onlyname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+    transform: rotate(-45deg);
+
+}
+
+.onlyname {
+    font-size: 14px;
+
+}
+
+.aboutme {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-grow: 5;
+    flex-basis: 0;
+}
+
+.aboutme a i {
+    font-size: 25px;
+
+}
+
+.aboutme a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.aboutme a:hover {
+    cursor: pointer;
+    background-color: #3AAFA9;
+
+}
+
+.contactIcons {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 0;
+
+}
+
+.contactIcons li {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.contactIcons li:hover {
+    cursor: pointer;
+    background-color: gray;
+
+}
+
+.contactIcons li i {
+    font-size: 15px;
+
+}
+
+/* Section 2 about me  OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+.me {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto',
+        sans-serif;
+    overflow-x: hidden;
+    margin-left: 10vh;
+}
+
+.h1aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FEFFFF;
+    height: 30%;
+    width: 80%;
+
+}
+
+.h1aboutme h1 {
+    font-size: 35px;
+}
+
+.h1aboutme p {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* Click to see more information about ma workplaces */
+.tellmore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    font-family: "roboto";
+    color: white;
+    height: 10%;
+}
+
+button.seemore {
+    box-sizing: content-box;
+    border-radius: 50%;
+    font-size: 30px;
+    border-style: none;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    background-color: transparent;
+    color: white;
+}
+
+.tellmore p {
+    margin-bottom: 15px;
+}
+
+button.seemore i {
+    text-shadow: 0 -20px 0 white, 0 -40px 0 white;
+    transform: translateY(-50px);
+    animation: arrow 1.5s linear infinite;
+}
+
+@keyframes arrow {
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+/* Timeline with my work experience */
+.lineFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+    text-align: center;
+}
+
+.flexparentinput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 30%;
+    width: 80%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.axa,
+.mlekpol,
+.hm,
+.impel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 25%;
+    text-align: center;
+}
+
+.axa p,
+.mlekpol p,
+.hm p,
+.impel p {
+    font-size: 23px;
+    color: #FEFFFF;
+}
+
+.axa h3,
+.mlekpol h3,
+.hm h3,
+.impel h3 {
+    font-weight: 300;
+    font-family: "roboto";
+    color: #FEFFFF;
+    font-size: 12px;
+}
+
+.dotandline {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+span.span {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-color: #FEFFFF;
+    border-radius: 50%;
+}
+
+span.changecolor {
+    background-color: #00fff9;
+    box-shadow: 0px 0px 3px 1px #00fff9;
+}
+
+.dotandline div {
+    display: block;
+    height: 4px;
+    flex-grow: 1;
+    background-color: #FEFFFF;
+}
+
+.flexparentoutput {
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 70%;
+}
+
+.flexparentoutput p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    transition: .4s;
+    width: 100%;
+}
+
+div.changecolor {
+    background-color: #00fff9;
+    box-shadow: 0px 0px 3px 1px #00fff9;
+}
+
+p.pshow {
+    opacity: 1;
+}
+
+/* My skills cards  SKILSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSs*/
+.skills {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vh;
+}
+
+/* my skills cards */
+.h1andcards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 60%;
+    flex-grow: 1;
+    width: 100%;
+
+}
+
+.h1andcards h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "roboto";
+    color: white;
+    font-size: 30px;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+
+.container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90%;
+    position: relative;
+}
+
+.container .card {
+    position: relative;
+    width: 30%;
+    height: 45%;
+    background: #1D2F36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    color: white;
+    overflow: hidden;
+}
+
+
+.container .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.1)
+}
+
+.container .card .content {
+    padding: 30px;
+    text-align: center;
+
+}
+
+.container .card .content h2 {
+    position: absolute;
+    right: 30px;
+    font-size: 3em;
+    font-weight: 800;
+    color: #00fff9;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.container .card:hover .content h2 {
+    opacity: 1;
+    transform: translateY(-60px);
+}
+
+.container .card .content h3 {
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    z-index: 2;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.container .card .content p {
+    position: relative;
+    font-size: 1em;
+    color: #fff;
+    z-index: 2;
+    font-weight: 300;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.container .card:hover .content h3,
+.container .card:hover .content p {
+    opacity: 1;
+}
+
+.container .card span {
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.container .card:hover span {
+    opacity: 1;
+}
+
+.container .card span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #00fff9);
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(100%)
+    }
+}
+
+.container .card span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #00fff9);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    100% {
+        transform: translateY(100%)
+    }
+}
+
+.container .card span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #00fff9);
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%)
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+.container .card span:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #00fff9);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%)
+    }
+
+    100% {
+        transform: translateY(-100%)
+    }
+}
+
+/* My language skills  */
+
+.language {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+}
+
+.languge1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 100%;
+}
+
+.languge1 h1 {
+    text-align: center;
+    width: 100%;
+    margin: 15px 0;
+    color: white;
+    font-size: 30px;
+}
+
+.languge1 p {
+    text-align: center;
+    color: white;
+}
+
+.skillbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.skillbox h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-family: "roboto";
+}
+
+.skillbox .skillbar1,
+.skillbox .skillbar2,
+.skillbox .skillbar3,
+.skillbox .skillbar4 {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.skillbox .skillbar1::before,
+.skillbox .skillbar2::before,
+.skillbox .skillbar3::before,
+.skillbox .skillbar4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #00fff9;
+    width: 85%;
+}
+
+.skillbox .skillbar2::before {
+    width: 50%;
+}
+
+.skillbox .skillbar3::before {
+    width: 70%;
+
+}
+
+.skillbox .skillbar4::before {
+    width: 90%;
+}
+
+.skillbox .skillbar1::after,
+.skillbox .skillbar2::after,
+.skillbox .skillbar3::after,
+.skillbox .skillbar4::after {
+    content: "85%";
+    position: absolute;
+    left: 85%;
+    bottom: 200%;
+    color: white;
+}
+
+.skillbox .skillbar2::after {
+    content: "50%";
+    left: 50%;
+}
+
+.skillbox .skillbar3::after {
+    content: "70%";
+    left: 70%;
+}
+
+.skillbox .skillbar4::after {
+    content: "90%";
+    left: 90%;
+
+}
+
+.hamburger {
+    display: none;
+}
+
+/* Section 4 - PORTFOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOLIO */
+
+.portfolio {
+    display: flex;
+    height: 100vh;
+    margin-left: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90%;
+}
+
+.portfolio-container h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    color: white;
+    font-size: 35px;
+}
+
+.names {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 60%;
+    height: 10%;
+}
+
+.names li {
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+}
+
+.names li.current {
+    color: #00fff9;
+
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 100%;
+    list-style: none;
+}
+
+.projects li {
+    width: 25%;
+    height: 40%;
+    cursor: pointer;
+    background-color: white;
+}
+
+.projects li.activate {
+    width: 35vh;
+    height: 40vh;
+    cursor: pointer;
+    background-color: white;
+}
+
+.projects li.unactive {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Sectio 5 - formmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 10vh;
+}
+
+.container-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    width: 90%;
+    height: 80%;
+}
+
+.container-contact h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    color: white;
+    font-size: 35px;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+}
+
+.form h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    color: white;
+}
+
+.formnameandsurname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+
+.formname {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.formname input,
+.formsurname input {
+    width: 95%;
+    height: 25%;
+}
+
+.formsurname {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.yourcomment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.yourcomment .form-control {
+    width: 100%;
+    height: 100%;
+
+}
+
+@media (max-width: 1300px) {
+
+    /* Section 1 */
+    .aboutme a {
+
+        font-size: 8px;
+    }
+
+    .hi,
+    .myname,
+    .proffesion {
+        padding: 5px 0;
+        font-size: 22px;
+    }
+
+    .animation2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .animation .animation2::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    /* Section 2 */
+
+    .h1aboutme h1 {
+        font-size: 30px;
+    }
+
+    .h1aboutme p {
+        font-size: 15px;
+    }
+
+    .tellmore p {
+        margin-bottom: 15px;
+        font-size: 11px;
+    }
+
+    .axa p,
+    .mlekpol p,
+    .hm p,
+    .impel p {
+        font-size: 21px;
+
+    }
+
+    .axa h3,
+    .mlekpol h3,
+    .hm h3,
+    .impel h3 {
+
+        font-size: 12px;
+    }
+
+
+    span.span {
+        width: 20px;
+        height: 20px;
+
+    }
+
+    span.changecolor {
+        background-color: #00fff9;
+        box-shadow: 0px 0px 3px 1px #00fff9;
+    }
+
+    .dotandline div {
+        height: 3px;
+    }
+
+    .flexparentoutput p {
+        font-size: 18px;
+    }
+
+    /* Section 3 */
+    .h1andcards h1 {
+        font-size: 25px;
+    }
+
+    .container .card .content {
+        padding: 20px;
+    }
+
+    .container .card .content h2 {
+        font-size: 2.5em;
+    }
+
+    .container .card:hover .content h2 {
+        transform: translateY(-35px);
+    }
+
+    .container .card .content h3 {
+        font-size: 1.2em;
+    }
+
+    .container .card .content p {
+        font-size: .9em;
+    }
+
+    .languge1 h1 {
+        font-size: 25px;
+    }
+
+    .languge1 p {
+        font-size: 15px;
+    }
+
+    .skillbox h3 {
+        font-size: 15px;
+    }
+
+    /* Section 4 - portfolio */
+    .portfolio-container h1 {
+        font-size: 30px;
+    }
+
+    .names li {
+        font-size: 15px;
+    }
+
+    .container-contact h1 {
+        font-size: 30px;
+
+    }
+}
+
+@media (max-width: 1050px) {
+
+    /* Section 1 */
+
+    .hi,
+    .myname,
+    .proffesion {
+        padding: 5px 0;
+        font-size: 19px;
+    }
+
+    button.cv {
+        padding: 5px 5px;
+        border-radius: 5px;
+    }
+
+    /* Section 2 */
+
+    .h1aboutme h1 {
+        font-size: 25px;
+    }
+
+    .h1aboutme p {
+        font-size: 15px;
+    }
+
+    .tellmore p {
+        margin-bottom: 15px;
+        font-size: 11px;
+    }
+
+    button.seemore {
+        font-size: 25px;
+    }
+
+    .axa p,
+    .mlekpol p,
+    .hm p,
+    .impel p {
+        font-size: 19px;
+
+    }
+
+    .axa h3,
+    .mlekpol h3,
+    .hm h3,
+    .impel h3 {
+
+        font-size: 11px;
+    }
+
+    span.span {
+        width: 18px;
+        height: 18px;
+
+    }
+
+    span.changecolor {
+        background-color: #00fff9;
+        box-shadow: 0px 0px 3px 1px #00fff9;
+    }
+
+    .dotandline div {
+        height: 3px;
+    }
+
+    .flexparentoutput p {
+        font-size: 17px;
+    }
+
+    /* Section 3 */
+    .h1andcards h1 {
+        font-size: 25px;
+    }
+
+    .container .card .content {
+        padding: 10px;
+    }
+
+    .container .card .content h2 {
+        font-size: 2.3em;
+    }
+
+    .container .card:hover .content h2 {
+        transform: translateY(-35px);
+    }
+
+    .container .card .content h3 {
+        font-size: 1.1em;
+    }
+
+    .container .card .content p {
+        font-size: .8em;
+    }
+
+    .languge1 h1 {
+        font-size: 25px;
+    }
+
+    .languge1 p {
+        font-size: 15px;
+    }
+
+    .skillbox h3 {
+        font-size: 15px;
+    }
+
+    .names li {
+        font-size: 14px;
+    }
+
+    .names {
+        width: 70%;
+    }
+
+    .container-contact h1 {
+        font-size: 25px;
+
+    }
+
+    .form h2 {
+        font-size: 19px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .hi,
+    .myname,
+    .proffesion {
+        padding: 5px 0;
+        font-size: 17px;
+    }
+
+    .allinformations {
+        width: 70%;
+    }
+
+    /* Section 2 */
+    .h1aboutme h1 {
+        font-size: 25px;
+    }
+
+    .h1aboutme p {
+        font-size: 13px;
+    }
+
+    .tellmore p {
+        margin-bottom: 12px;
+        font-size: 10px;
+    }
+
+    button.seemore {
+        font-size: 20px;
+    }
+
+    .axa p,
+    .mlekpol p,
+    .hm p,
+    .impel p {
+        font-size: 16px;
+
+    }
+
+    .axa h3,
+    .mlekpol h3,
+    .hm h3,
+    .impel h3 {
+
+        font-size: 9px;
+    }
+
+
+    span.span {
+        width: 16px;
+        height: 16px;
+
+    }
+
+    span.changecolor {
+        background-color: #00fff9;
+        box-shadow: 0px 0px 3px 1px #00fff9;
+    }
+
+    .dotandline div {
+        height: 3px;
+    }
+
+    .flexparentoutput p {
+        font-size: 16px;
+    }
+
+    /* Section 3 */
+    .container .card .content h2 {
+        font-size: 2em;
+    }
+
+    .h1andcards h1 {
+        font-size: 23px;
+    }
+
+    .container .card:hover .content h2 {
+        transform: translateY(-30px);
+    }
+
+    .container .card .content h3 {
+        font-size: 1em;
+    }
+
+    .container .card .content p {
+        font-size: .7em;
+    }
+
+    .languge1 h1 {
+        font-size: 23px;
+    }
+
+    .languge1 p {
+        font-size: 14px;
+    }
+
+    .skillbox h3 {
+        font-size: 14px;
+    }
+
+    .portfolio-container h1 {
+        font-size: 25px;
+    }
+
+    .names li {
+        font-size: 14px;
+    }
+
+    .container-contact h1 {
+        font-size: 25px;
+
+    }
+
+    .form h2 {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 710px) {
+
+    /* Section 1 */
+    .hi,
+    .myname,
+    .proffesion {
+        padding: 5px 0;
+        font-size: 13px;
+    }
+
+    button.cv {
+        padding: 2px 2px;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+
+    button.cv span {
+        font-size: 12px;
+    }
+
+    .animation2 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .animation .animation2::after {
+        width: 10px;
+        height: 10px;
+    }
+
+    .allinformations {
+        width: 70%;
+    }
+
+    /* Section 2 */
+    .h1aboutme {
+        width: 90%;
+    }
+
+    .h1aboutme h1 {
+        font-size: 23px;
+    }
+
+    .h1aboutme p {
+        font-size: 13px;
+    }
+
+    .tellmore p {
+        margin-bottom: 12px;
+        font-size: 9px;
+    }
+
+    button.seemore {
+        font-size: 15px;
+    }
+
+    .flexparentinput {
+        width: 90%;
+    }
+
+    .axa p,
+    .mlekpol p,
+    .hm p,
+    .impel p {
+        font-size: 12px;
+
+    }
+
+    .axa h3,
+    .mlekpol h3,
+    .hm h3,
+    .impel h3 {
+
+        font-size: 8px;
+    }
+
+
+    span.span {
+        width: 13px;
+        height: 13px;
+
+    }
+
+    span.changecolor {
+        background-color: #00fff9;
+        box-shadow: 0px 0px 3px 1px #00fff9;
+    }
+
+    .dotandline div {
+        height: 2px;
+    }
+
+    .flexparentoutput {
+        width: 90%;
+    }
+
+    .flexparentoutput p {
+        font-size: 12px;
+    }
+
+    /* Section 3 */
+    .container .card .content h2 {
+        font-size: 1em;
+    }
+
+    .h1andcards h1 {
+        font-size: 21px;
+    }
+
+    .container .card:hover .content h2 {
+        transform: translateY(-30px);
+    }
+
+    .container .card .content h3 {
+        font-size: .7em;
+    }
+
+    .container .card .content p {
+        font-size: .5em;
+    }
+
+    .languge1 h1 {
+        font-size: 21px;
+    }
+
+    .languge1 p {
+        font-size: 12px;
+    }
+
+    .skillbox h3 {
+        font-size: 12px;
+    }
+
+    .skillbox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skillbox h3 {
+        margin-bottom: 11px;
+    }
+
+    .skillbox .skillbar1,
+    .skillbox .skillbar2,
+    .skillbox .skillbar3,
+    .skillbox .skillbar4 {
+        height: 3px;
+        margin-bottom: 5px;
+    }
+
+    .skillbox .skillbar1::after,
+    .skillbox .skillbar2::after,
+    .skillbox .skillbar3::after,
+    .skillbox .skillbar4::after {
+        font-size: 13px;
+    }
+
+    /* Section 3 */
+    .portfolio-container h1 {
+        font-size: 23px;
+    }
+
+    .names {
+        width: 80%;
+    }
+
+    .names li {
+        font-size: 12px;
+    }
+
+    .container-contact h1 {
+        font-size: 23px;
+
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* Section 1 */
+    .menu {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -5;
+    }
+
+    .aboutme a {
+        font-size: 15px;
+    }
+
+    /* Class created for hamburger menu */
+    .active {
+        opacity: 1;
+    }
+
+    .remove {
+        opacity: 0;
+    }
+
+    .addindex {
+        z-index: 50;
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        font-size: 30px;
+        top: 1%;
+        right: 2%;
+        color: white;
+        z-index: 100;
+    }
+
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    div.myinfo {
+        height: 60%;
+        width: 100%;
+    }
+
+    .allinformations {
+        height: 50%;
+        width: 90%;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 60%;
+        width: 100%;
+    }
+
+    .hi,
+    .myname,
+    .proffesion {
+        font-size: 14px;
+    }
+
+    button.cv {
+        padding: 2px 2px;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+
+    button.cv span {
+        font-size: 11px;
+    }
+
+    /* Section 2 */
+    .me {
+        margin-left: 0vh;
+    }
+
+    .h1aboutme {
+        width: 95%;
+    }
+
+    .h1aboutme h1 {
+        font-size: 19px;
+    }
+
+    .h1aboutme p {
+        font-size: 12px;
+    }
+
+    .flexparentinput {
+        width: 95%;
+    }
+
+    span.changecolor {
+        background-color: #00fff9;
+        box-shadow: 0px 0px 3px 1px #00fff9;
+    }
+
+    .flexparentoutput {
+        width: 95%;
+    }
+
+    /* Section 3 */
+
+    .skills {
+        height: 120vh;
+        margin-left: 0vh;
+    }
+
+    .container .card {
+        position: relative;
+        width: 45%;
+        height: 30%;
+        background: #1D2F36;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .card .content h2 {
+        font-size: 1em;
+    }
+
+    .h1andcards h1 {
+        font-size: 19px;
+    }
+
+    .container .card .content {
+        padding: 2px;
+    }
+
+    .container .card:hover .content h2 {
+        transform: translateY(-30px);
+    }
+
+    .container .card .content h3 {
+        font-size: .6em;
+    }
+
+    .container .card .content p {
+        font-size: .5em;
+    }
+
+    .languge1 h1 {
+        font-size: 19px;
+    }
+
+    .languge1 p {
+        font-size: 12px;
+    }
+
+    .skillbox h3 {
+        font-size: 12px;
+    }
+
+    .skillbox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skillbox h3 {
+        margin-bottom: 11px;
+    }
+
+    /* Section 3 */
+    .portfolio {
+        align-items: flex-start;
+        height: 120vh;
+        margin-left: 0vh;
+    }
+
+    .portfolio-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio-container h1 {
+        font-size: 19px;
+    }
+
+    .names {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+        width: 100%;
+        height: 10%;
+    }
+
+    .names li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        width: 50%;
+        height: 50%;
+    }
+
+    .projects {
+        justify-content: space-around;
+        align-items: center;
+        height: 80%;
+        width: 100%;
+    }
+
+    .projects li {
+        width: 45%;
+        height: 30%;
+    }
+
+    .projects li.activate {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    /* Section 5 */
+    .contact {
+        margin-left: 0vh;
+    }
+
+    .container-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        width: 90%;
+        height: 80%;
+    }
+
+    .container-contact h1 {
+        font-size: 19px;
+
+    }
+
+    .form {
+        width: 100%;
+        height: 90%;
+    }
+
+    .formnameandsurname {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 20%;
+        /* background-color: tomato; */
+        width: 100%;
+    }
+
+    .formname {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        /* background-color: #00fff9;    */
+    }
+
+    .formname input,
+    .formsurname input {
+        width: 100%;
+        height: 60%;
+    }
+
+    .formsurname {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        /* background-color: #00fff9;   */
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    .yourcomment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
+        width: 100%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    .menu {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -5;
+    }
+
+    .animation2 {
+        width: 70px;
+        height: 70px;
+    }
+
+    .aboutme a {
+        font-size: 15px;
+    }
+
+    /* Class created for hamburger menu */
+    .active {
+        opacity: 1;
+    }
+
+    .addindex {
+        z-index: 50;
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        font-size: 30px;
+        top: 1%;
+        right: 2%;
+        color: white;
+        z-index: 100;
+    }
+
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    div.myinfo {
+        height: 60%;
+        width: 100%;
+    }
+
+    .allinformations {
+        height: 50%;
+        width: 90%;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 60%;
+        width: 100%;
+    }
+
+    .hi,
+    .myname,
+    .proffesion {
+        font-size: 14px;
+    }
+
+    button.cv {
+        padding: 2px 2px;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+
+    button.cv span {
+        font-size: 11px;
+    }
+
+    /* Section 2 */
+    .me {
+        margin-left: 0vh;
+    }
+
+    .h1aboutme {
+        width: 95%;
+    }
+
+    .h1aboutme h1 {
+        font-size: 23px;
+    }
+
+    .h1aboutme p {
+        font-size: 12px;
+    }
+
+    .flexparentinput {
+        width: 95%;
+    }
+
+    span.changecolor {
+        background-color: #00fff9;
+        box-shadow: 0px 0px 3px 1px #00fff9;
+    }
+
+    .flexparentoutput {
+        width: 95%;
+    }
+
+    /* Section 3 */
+
+    .skills {
+        height: 120vh;
+        margin-left: 0vh;
+    }
+
+    .container .card .content h2 {
+        font-size: 1em;
+    }
+
+    .h1andcards h1 {
+        font-size: 19px;
+    }
+
+    .container .card .content {
+        padding: 2px;
+    }
+
+    .container .card:hover .content h2 {
+        transform: translateY(-30px);
+    }
+
+    .container .card .content h3 {
+        font-size: .6em;
+    }
+
+    .container .card .content p {
+        font-size: .5em;
+    }
+
+    .languge1 h1 {
+        margin: 5px 0;
+        font-size: 19px;
+    }
+
+    .languge1 p {
+        font-size: 12px;
+    }
+
+    .skillbox h3 {
+        font-size: 12px;
+    }
+
+    .skillbox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skillbox h3 {
+        margin-bottom: 0px;
+    }
+
+    /* Section 3 */
+    .portfolio {
+        align-items: flex-start;
+        height: 120vh;
+        margin-left: 0vh;
+    }
+
+    .portfolio-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio-container h1 {
+        font-size: 19px;
+    }
+
+    .names {
+        width: 100%;
+        height: 10%;
+    }
+
+    .names li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        width: 25%;
+        height: 100%;
+    }
+
+    .projects {
+        justify-content: space-around;
+        align-items: center;
+        height: 80%;
+        width: 100%;
+    }
+
+    .projects li {
+        width: 30%;
+        height: 45%;
+    }
+
+    .projects li.activate {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    /* section 5 */
+    .contact {
+        margin-left: 0vh;
+    }
+
+    .container-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        width: 90%;
+        height: 80%;
+    }
+
+    .container-contact h1 {
+        font-size: 19px;
+
+    }
+
+    .form {
+        width: 100%;
+        height: 90%;
+    }
+
+    .formnameandsurname {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 20%;
+        /* background-color: tomato; */
+        width: 100%;
+    }
+
+    .formname {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        /* background-color: #00fff9;   */
+    }
+
+    .formname input,
+    .formsurname input {
+        width: 100%;
+        height: 90%;
+    }
+}
