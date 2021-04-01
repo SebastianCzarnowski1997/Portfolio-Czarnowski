@@ -1846,12 +1846,12 @@ div.checkPortfolio.changingOpacity {
     }
 
     div.checkPortfolio h1 {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     div.checkPortfolio button {
         background-color: transparent;
-        padding: 5px 10px;
+        padding: 3px 7px;
         color: #DEF2F1;
         border: 1px solid #DEF2F1;
         border-radius: 10px;
@@ -1863,7 +1863,7 @@ div.checkPortfolio.changingOpacity {
     div.checkPortfolio button a {
         color: white;
         text-decoration: none;
-        font-size: 12px;
+        font-size: 10px;
     }
 
 
