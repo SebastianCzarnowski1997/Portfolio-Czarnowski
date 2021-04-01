@@ -253,22 +253,24 @@ button.cv span {
 
 }
 
-.contactIcons li {
+.contactIcons a {
     display: flex;
     width: 50%;
     justify-content: center;
     align-items: center;
+    color: white;
+    text-decoration: none;
 
 
 }
 
-.contactIcons li:hover {
+.contactIcons a:hover {
     cursor: pointer;
     background-color: gray;
 
 }
 
-.contactIcons li i {
+.contactIcons a i {
     font-size: 15px;
 
 }
@@ -285,7 +287,10 @@ button.cv span {
         sans-serif;
     overflow-x: hidden;
     margin-left: 10vh;
+
 }
+
+
 
 .h1aboutme {
     display: flex;
@@ -295,11 +300,14 @@ button.cv span {
     color: #FEFFFF;
     height: 30%;
     width: 80%;
-
+    opacity: 0;
+    transition: all .7s ease-in-out;
+    transform: translateX(40%);
 }
 
 .h1aboutme h1 {
     font-size: 35px;
+
 }
 
 .h1aboutme p {
@@ -308,6 +316,7 @@ button.cv span {
     font-weight: 300;
     margin-top: 10px;
 }
+
 
 /* Click to see more information about ma workplaces */
 .tellmore {
@@ -320,6 +329,9 @@ button.cv span {
     font-family: "roboto";
     color: white;
     height: 10%;
+    opacity: 0;
+    transition: .7s all ease-in-out;
+    transform: translateX(-40%);
 }
 
 button.seemore {
@@ -359,6 +371,9 @@ button.seemore i {
     height: 60%;
     width: 100%;
     text-align: center;
+    opacity: 0;
+    transition: .7s all ease-in-out;
+    transform: translateY(100%);
 }
 
 .flexparentinput {
@@ -463,6 +478,11 @@ div.changecolor {
 
 p.pshow {
     opacity: 1;
+}
+
+.addme {
+    opacity: 1;
+    transform: translate(0px);
 }
 
 /* My skills cards  SKILSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSs*/
@@ -752,7 +772,7 @@ p.pshow {
 }
 
 .skillbox .skillbar4::before {
-    width: 90%;
+    width: 40%;
 }
 
 .skillbox .skillbar1::after,
@@ -777,8 +797,8 @@ p.pshow {
 }
 
 .skillbox .skillbar4::after {
-    content: "90%";
-    left: 90%;
+    content: "40%";
+    left: 40%;
 
 }
 
@@ -847,27 +867,76 @@ p.pshow {
     list-style: none;
 }
 
-.projects li {
+.projects div {
+    width: 25%;
+    height: 40%;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+.portfolioIMG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.checkPortfolio {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: .3s;
+}
+
+
+
+div.checkPortfolio button {
+    background-color: transparent;
+    padding: 5px 15px;
+    color: #DEF2F1;
+    border: 2px solid #DEF2F1;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+div.checkPortfolio button a {
+    color: white;
+    text-decoration: none;
+}
+
+.checkPortfolio h1 {
+    font-size: 15px;
+}
+
+div.checkPortfolio.changingOpacity {
+    opacity: 1;
+}
+
+.projects div.activate {
     width: 25%;
     height: 40%;
     cursor: pointer;
     background-color: white;
 }
 
-.projects li.activate {
-    width: 35vh;
-    height: 40vh;
-    cursor: pointer;
-    background-color: white;
-}
-
-.projects li.unactive {
+.projects div.unactive {
     display: none;
     width: 0;
     height: 0;
 }
 
-/* Sectio 5 - formmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm */
+/* Sectio 5 - */
 
 .contact {
     display: flex;
@@ -959,6 +1028,18 @@ p.pshow {
     width: 100%;
     height: 100%;
 
+}
+
+.buttonSend button {
+    background-color: transparent;
+    padding: 5px 15px;
+    color: #DEF2F1;
+    border: 3px solid #DEF2F1;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 1.5s;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 @media (max-width: 1300px) {
@@ -1087,6 +1168,10 @@ p.pshow {
         font-size: 30px;
 
     }
+
+    div.checkPortfolio h1 {
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 1050px) {
@@ -1213,6 +1298,10 @@ p.pshow {
         font-size: 19px;
     }
 
+    div.checkPortfolio h1 {
+        font-size: 15px;
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -1330,6 +1419,10 @@ p.pshow {
 
     .form h2 {
         font-size: 18px;
+    }
+
+    div.checkPortfolio h1 {
+        font-size: 15px;
     }
 
 }
@@ -1507,6 +1600,10 @@ p.pshow {
     .container-contact h1 {
         font-size: 23px;
 
+    }
+
+    div.checkPortfolio h1 {
+        font-size: 15px;
     }
 }
 
@@ -1716,21 +1813,59 @@ p.pshow {
     }
 
     .projects {
-        justify-content: space-around;
+        justify-content: space-evenly;
+
         align-items: center;
         height: 80%;
         width: 100%;
     }
 
-    .projects li {
+    .projects div {
         width: 45%;
         height: 30%;
     }
 
-    .projects li.activate {
+    .projects div.activate {
         width: 30vh;
         height: 30vh;
     }
+
+    /* section 4 */
+    div.checkPortfolio {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: rgba(0, 0, 0, .8);
+        opacity: 1;
+        transition: .3s;
+    }
+
+    div.checkPortfolio h1 {
+        font-size: 15px;
+    }
+
+    div.checkPortfolio button {
+        background-color: transparent;
+        padding: 5px 10px;
+        color: #DEF2F1;
+        border: 1px solid #DEF2F1;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: 1.5s;
+        cursor: pointer;
+    }
+
+    div.checkPortfolio button a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
 
     /* Section 5 */
     .contact {
@@ -1792,6 +1927,7 @@ p.pshow {
         flex-basis: 0;
         flex-grow: 1;
     }
+
     .yourcomment {
         display: flex;
         justify-content: center;
@@ -1970,7 +2106,7 @@ p.pshow {
     }
 
     .portfolio-container {
-        width: 100%;
+        width: 95%;
         height: 100%;
     }
 
@@ -1999,14 +2135,32 @@ p.pshow {
         width: 100%;
     }
 
-    .projects li {
+    .projects div {
         width: 30%;
         height: 45%;
     }
 
-    .projects li.activate {
+    .projects div.activate {
         width: 50vh;
         height: 50vh;
+    }
+
+    div.checkPortfolio {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: rgba(0, 0, 0, .8);
+        opacity: 1;
+        transition: .3s;
+    }
+
+    div.checkPortfolio h1 {
+        font-size: 15px;
     }
 
     /* section 5 */

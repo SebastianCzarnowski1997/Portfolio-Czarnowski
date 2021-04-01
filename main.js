@@ -21,7 +21,8 @@ const spans = [...document.querySelectorAll(".span")];
 const myWorkAssigments = [...document.querySelectorAll(".flexparentoutput p")];
 // Section 4 - portfolio
 let names = [...document.querySelectorAll(".names li")];
-let projects = [...document.querySelectorAll(".projects li")];
+let projects = [...document.querySelectorAll(".projects > div")];
+const checkPortfiolio = [...document.querySelectorAll(".checkPortfolio")]
 
 
 
@@ -180,6 +181,22 @@ names.forEach((name, index) => {
 })
 
 
+checkPortfiolio.forEach((project) => {
+    project.addEventListener('mouseenter', (e) => {
+        if (e.target == project) {
+            project.classList.add("changingOpacity")
+        } 
+    })
+})
+checkPortfiolio.forEach((project) => {
+    project.addEventListener('mouseleave', (e) => {
+        if (e.target == project) {
+            project.classList.remove("changingOpacity")
+        } 
+    })
+})
+
+
 // Side menu - scroll on click
 
 $(document).ready(function () {
@@ -194,3 +211,20 @@ $(document).ready(function () {
         }, 500);
     })
 })
+
+
+function scrollAppear() {
+    let introText = document.querySelector(".h1aboutme");
+    let introLineFlex = document.querySelector(".lineFlex");
+    let tellMore = document.querySelector(".tellmore");
+    let introPosition = introText.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight / 2;
+
+
+    if (introPosition < screenPosition) {
+        introText.classList.add("addme");
+        introLineFlex.classList.add("addme");
+        tellMore.classList.add("addme");
+    }
+}
+window.addEventListener('scroll', scrollAppear)
