@@ -8,7 +8,7 @@ const newTableNames = ["Strona Głowna", "O mnie", "Umiejętności", "Portfolio"
 const iconTable = ["<i class='fas fa-home'></i>", "<i class='fas fa-male'></i>", "<i class='fab fa-battle-net'></i>", "<i class='fas fa-project-diagram'></i>", "<i class='fas fa-envelope-square'></i>"];
 const hamburgerBar = document.querySelector(".hamburger div");
 const rollingMenu = document.querySelector(".menu");
-const text = ["Cześć", "nazywam się Sebastian Czarnowski", "Jestem Front-end developerem"];
+const text = ["Cześć,", "Nazywam się Sebastian Czarnowski", "Jestem Front-end developerem"];
 let activeLetter = 0;
 let activeLetter1 = 0;
 let activeLetter2 = 0;
