@@ -19,12 +19,11 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     font-family: arial;
     background-color: #17252A;
     font-family: 'Roboto',
         sans-serif;
-    flex-basis: 0;
+    height: 100vh;
 }
 
 /* First circle animation */
@@ -277,7 +276,7 @@ button.cv a {
 
 }
 
-/* Section 2 about me  OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+/* Section 2 about me  */
 .me {
     display: flex;
     height: 100vh;
@@ -808,7 +807,7 @@ p.pshow {
     display: none;
 }
 
-/* Section 4 - PORTFOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOLIO */
+/* Section 4 - PORTFOLIO */
 
 .portfolio {
     display: flex;
